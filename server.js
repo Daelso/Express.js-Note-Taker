@@ -40,4 +40,4 @@ app.post('/api/notes', (req, res) => {
 
 app.listen(process.env.PORT || 3000, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-  });
+  }); //Honestly not too sure how this works but heroku has it in their docs as how its supposed to be.
