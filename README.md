@@ -48,5 +48,5 @@ This application is covered under the MIT license.
   
 ## Deployment: 
 
-Try it out at: 
+Try it out at: https://placid-plateau.herokuapp.com/
 
