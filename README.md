@@ -16,9 +16,9 @@ This project was made to better understand Express.js and how it works/weaves th
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [License](#license)
 - [Questions](#questions)
+- [Deployment](#deployment)
 
 ## Installation Instructions:
 
@@ -44,4 +44,8 @@ This application is covered under the MIT license.
 ## Questions:
 
   Feel free to email me at: cmurtau@g.clemson.edu
+  
+## Deployment: 
+
+Try it out at: 
 
