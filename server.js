@@ -16,8 +16,11 @@ app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/Develop/public/notes.html'))
 );
 
-app.get('/api/notes', (req, res) =>
-res.status(200).json(db));
+app.get("/api/notes", (req, res) => {
+    res.sendFile(path.join(__dirname, "./Develop/db/db.json"));
+});
+
+
 
 
 app.get("*", (req, res) => {
