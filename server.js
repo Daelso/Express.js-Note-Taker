@@ -25,7 +25,7 @@ app.get("*", (req, res) => {
 });
 
 app.post('/api/notes', (req, res) => {
-    console.info(`${req.method} request received to add a review`);
+    console.info(`${req.method} request received to add a note`);
 
     let newNote = req.body; //the note is = to the body
     let noteList = JSON.parse(fs.readFileSync("./Develop/db/db.json", "utf8")); // generates a list of all notes and saves it to a var by reading current db
@@ -43,6 +43,21 @@ app.post('/api/notes', (req, res) => {
 
 
 
+app.delete("/api/notes/:id", (req, res) => {
+    console.info(`${req.method} request received.`);
+
+    let noteList = JSON.parse(fs.readFileSync("./Develop/db/db.json", "utf8"));
+    let noteId = (req.params.id).toString();
+
+
+    noteList = noteList.filter(selected =>{
+        return selected.id != noteId;
+    })
+
+    //saves the new db without the selected note.
+    fs.writeFileSync("./Develop/db/db.json", JSON.stringify(noteList));
+    res.json(noteList);
+});
 
 app.listen(process.env.PORT || 3000, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
