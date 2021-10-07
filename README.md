@@ -1,12 +1,12 @@
 
-# Title: Node.JS team profile generator
+# Title: 11 Express.js Note Taker
 
-![badge](https://img.shields.io/badge/license-MIT-darkred) [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
+![badge](https://img.shields.io/badge/license-MIT-darkred) [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
 
 ## Description:
 
-This is another project created to better understand node.js, its various available dependencies and to incorporate OOP. This project required inquirer and the newly learned skill of creating object constructors and working with them.  I was greatly assisted by studying previous examples of this found here: https://github.com/nicolewallace09/team-profile-generator
+This project was made to better understand Express.js and how it works/weaves through various pieces of code. In this project I learned how to create working get, post and delete functions. 
 
 [![Demo video here](https://img.youtube.com/vi/v=bCvQ8fNOwxA/0.jpg)](https://www.youtube.com/watch?v=bCvQ8fNOwxA)
 
@@ -16,13 +16,13 @@ This is another project created to better understand node.js, its various availa
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [License](#license)
 - [Questions](#questions)
+- [Deployment](#deployment)
 
 ## Installation Instructions:
 
-This requires both node.js, jest and  inquirer. Open the terminal and begin with ```npm init``` followed by ```npm i inquirer```, then ```npm i jest``` as node modules are not included in this repo. This will allow for full functionality.
+This requires both express.js and uuid. Open the terminal and begin with ```npm init``` followed by ```npm i express```, then ```npm i uuid``` as node modules are not included in this repo. This will allow for full functionality.
 
 ## Usage:
 
@@ -44,4 +44,8 @@ This application is covered under the MIT license.
 ## Questions:
 
   Feel free to email me at: cmurtau@g.clemson.edu
+  
+## Deployment: 
+
+Try it out at: 
 
