@@ -1,0 +1,24 @@
+{
+  "name": "note_taker",
+  "version": "1.0.0",
+  "description": "note taker using express and node.js",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daelso/Express.js-Note-Taker.git"
+  },
+  "author": "Chase Murtaugh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Daelso/Express.js-Note-Taker/issues"
+  },
+  "homepage": "https://github.com/Daelso/Express.js-Note-Taker#readme"
+}
