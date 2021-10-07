@@ -6,7 +6,7 @@
 
 ## Description:
 
-This is another project created to better understand node.js, its various available dependencies and to incorporate OOP. This project required inquirer and the newly learned skill of creating object constructors and working with them.  I was greatly assisted by studying previous examples of this found here: https://github.com/nicolewallace09/team-profile-generator
+This project was made to better understand Express.js and how it works/weaves through various pieces of code. In this project I learned how to create working get, post and delete functions. 
 
 [![Demo video here](https://img.youtube.com/vi/v=bCvQ8fNOwxA/0.jpg)](https://www.youtube.com/watch?v=bCvQ8fNOwxA)
 
@@ -22,7 +22,7 @@ This is another project created to better understand node.js, its various availa
 
 ## Installation Instructions:
 
-This requires both node.js, jest and  inquirer. Open the terminal and begin with ```npm init``` followed by ```npm i inquirer```, then ```npm i jest``` as node modules are not included in this repo. This will allow for full functionality.
+This requires both express.js and uuid. Open the terminal and begin with ```npm init``` followed by ```npm i express```, then ```npm i uuid``` as node modules are not included in this repo. This will allow for full functionality.
 
 ## Usage:
 
