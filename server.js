@@ -23,22 +23,21 @@ res.status(200).json(db));
 app.post('/api/notes', (req, res) => {
     console.info(`${req.method} request received to add a review`);
 
-    let newNote = req.body;
-    let noteList = JSON.parse(fs.readFileSync("./Develop/db/db.json", "utf8"));
+    let newNote = req.body; //the note is = to the body
+    let noteList = JSON.parse(fs.readFileSync("./Develop/db/db.json", "utf8")); // generates a list of all notes and saves it to a var by reading current db
 
-    //create new property called id based on length and assign it to each json object
+    //creates unique ids using uuid, woo
     newNote.id = uuid();
-    //push updated note to the data containing notes history in db.json
-    noteList.push(newNote);
+    
+    noteList.push(newNote); //pushes our new note onto that array read from the db
 
     //write the updated data to db.json
-    fs.writeFileSync("./Develop/db/db.json", JSON.stringify(noteList));
+    fs.writeFileSync("./Develop/db/db.json", JSON.stringify(noteList)); //writes the list with newly added note, JSON's it and writes over the old db.
     res.json(noteList);
 
 })
 
 
-const PORT = 3001
-app.listen(PORT, () =>
-console.log(`App listening at http://localhost:${PORT} 🚀`)
-);
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
