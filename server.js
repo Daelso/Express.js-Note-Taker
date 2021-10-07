@@ -18,7 +18,7 @@ app.get('/notes', (req, res) =>
 
 app.get("/api/notes", (req, res) => {
     res.sendFile(path.join(__dirname, "./Develop/db/db.json"));
-});
+}); //This allows for instant updating/deleting of notes. It just needed to recall on the button press.
 
 
 
