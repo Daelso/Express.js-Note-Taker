@@ -12,10 +12,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('Develop/public'));
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "Develop/public/index.html"));
-});
-
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/Develop/public/notes.html'))
 );
@@ -27,21 +23,17 @@ res.status(200).json(db));
 app.post('/api/notes', (req, res) => {
     console.info(`${req.method} request received to add a review`);
 
-    const newNote = {
-        note:req.body,
-        id: uuid(),
-    }
+    let newNote = req.body;
+    let noteList = JSON.parse(fs.readFileSync("./Develop/db/db.json", "utf8"));
 
-    console.log(newNote)
+    //create new property called id based on length and assign it to each json object
+    newNote.id = uuid();
+    //push updated note to the data containing notes history in db.json
+    noteList.push(newNote);
 
-    const jsonthatNOTE = JSON.stringify(newNote)
-
-    fs.writeFile("Develop/db/db.json", jsonthatNOTE, (err) => {
-        if (err) console.log(err);
-        else {
-          console.log("Note successfully saved to db.json");
-        }
-      });
+    //write the updated data to db.json
+    fs.writeFileSync("./Develop/db/db.json", JSON.stringify(noteList));
+    res.json(noteList);
 
 })
 
