@@ -22,6 +22,16 @@ res.status(200).json(db));
 app.post('/api/notes', (req, res) => {
     console.info(`${req.method} request received to add a review`);
 
+    const newNote = {
+        title:req.body,
+        text: req.body,
+        id: uuid(),
+
+
+    }
+
+    console.log(newNote)
+
 
 })
 
